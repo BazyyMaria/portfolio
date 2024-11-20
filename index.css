@@ -2,10 +2,70 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #0d1a2d;
   margin: 0;
-  padding: 20px;
+  padding: 70px;
   display: flex;
   justify-content: center;
 }
+
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #14253d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+
+  z-index: 1000;
+}
+
+.Navbar__Link {
+  margin: 0 10px
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+
+.Navbar__Link-toggle {
+  display: none;
+}
+
+.Navbar__Items {
+  display: flex;
+  align-items: center;
+}
+
+.Navbar__Items--right {
+  margin-left:auto;
+}
+
+
+@media (max-width: 768px) {
+   .Navbar__Link-toggle {
+      display: block;
+}
+
+    
+.Navbar__Items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color:#14253d;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .Navbar__Items.active {
+    display: flex;
+  }
+}
+
 
 .card-container {
   display: flex;
